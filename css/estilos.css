@@ -1,0 +1,351 @@
+/*-----------------GENERAL--------------------*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#f4f4f4;
+    overflow-x:hidden; /* sirve para evitar las barras horizontales */
+}
+
+main{
+    min-height:80vh;
+}
+
+/*-------------------HEADER-------------------- */
+
+.encabezado{
+    background-color:#111;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 5%;
+    flex-wrap:wrap;
+}
+
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; 
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.logo img {
+    width: 28px;   
+    height: auto;
+}
+
+.logo span{
+    color:#d47b2a;
+}
+
+.menu a{
+    text-decoration:none;
+    color:white;
+    margin:0 15px;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    color:#d47b2a;
+}
+
+/*------------------BOTONES---------------------------- */
+
+.boton-principal{
+    background-color:#d47b2a;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.boton-principal:hover{
+    background-color:#a85e1f;
+    transform:scale(1.05);
+}
+
+.boton-principal:active{
+    transform:scale(0.95);
+}
+
+.boton-secundario{
+    background:transparent;
+    border:1px solid #d47b2a;
+    color:#d47b2a;
+    padding:10px 18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.boton-secundario:hover{
+    background-color:#d47b2a;
+    color:white;
+}
+
+/*-----------------FOOTER--------------- */
+
+.pie{
+    background-color:#111;
+    color:white;
+    padding:40px 5%;
+}
+
+.contenedor-pie{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.pie h3{
+    margin-bottom:15px;
+    border-bottom:2px solid #d47b2a;
+    display:inline-block;
+    padding-bottom:5px;
+}
+
+.pie ul{
+    list-style:none;
+}
+
+.pie a{
+    text-decoration:none;
+    color:#ccc;
+}
+
+.pie a:hover{
+    color:#d47b2a;
+}
+
+.pie p{
+    text-align:center;
+    margin-top:30px;
+    color:#aaa;
+}
+
+/*-------------------------- INICIO-----------------------*/
+
+.seccion-principal{
+    overflow:hidden;
+}
+
+.carrusel{
+    display:flex;
+    width:200%;
+    animation:deslizar 12s infinite;
+}
+
+.diapositiva{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:60px 5%;
+    background:#1b1b1b;
+    color:white;
+    flex-wrap:wrap;
+}
+
+.diapositiva img{
+    width:100%;
+    max-width:500px;
+}
+
+@keyframes deslizar{
+    0%{transform:translateX(0)}
+    50%{transform:translateX(-50%)}
+    100%{transform:translateX(0)}
+}
+
+.imagen-sneakers{
+    width: 50%;
+    display: flex;
+}
+
+/* ------------------ TIENDA------------------ */
+
+.seccion-productos{
+    padding:60px 5%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.tarjeta{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.tarjeta:hover{
+    transform:translateY(-10px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+.tarjeta img{
+    width:100%;
+}
+
+.contenido-tarjeta{
+    padding:20px;
+    text-align:center;
+}
+
+/*-------------------NOSOTROS------------------ */
+
+.seccion-nosotros{
+    padding:60px 5%;
+    display:flex;
+    flex-wrap:wrap;
+    gap:40px;
+    align-items:center;
+}
+
+.seccion-nosotros img{
+    width:100%;
+    max-width:500px;
+}
+
+.texto-nosotros{
+    flex:1;
+}
+
+/* -----------------------CONTACTO-------------------*/
+
+.seccion-contacto{
+    padding:60px 5%;
+}
+
+.contenedor-contacto{
+    display:flex;
+    flex-wrap:wrap;
+    gap:40px;
+}
+
+.formulario{
+    flex:1;
+}
+
+form{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+}
+
+form input,
+form textarea{
+    margin-bottom:15px;
+    padding:12px;
+    border:1px solid #ccc;
+    transition:0.3s;
+}
+
+form input:focus,
+form textarea:focus{
+    border-color:#d47b2a;
+    outline:none;
+}
+
+textarea{
+    resize:none;
+    height:120px;
+}
+
+
+
+
+/*---------------------------REDES----------------------------*/
+
+
+/* -------------------------SÍGUENOS------------------------- */
+
+.seccion-redes {
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.seccion-redes h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: var(--color-primario);
+}
+
+.iconos-redes {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.iconos-redes img {
+    width: 32px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.iconos-redes img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.3);
+}
+
+/* ---------------- RESPONSIVE------------------- */
+
+@media(max-width:768px){
+    .diapositiva{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
+
+
+
+
+
+
+/* ----------------- ¿QUÉ ES SNEAKERS? ----------------------*/
+
+.que-es-sneakers {
+    background-color: var(--color-secundario);
+    padding: 5rem 2rem;
+}
+
+.contenido-sneakers {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.texto-sneakers h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-primario);
+}
+
+.texto-sneakers p {
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+}
+
+.imagen-sneakers img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.4s;
+}
+
+.imagen-sneakers img:hover {
+    transform: scale(1.05);
+}
